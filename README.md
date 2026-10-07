@@ -4,6 +4,30 @@
 
 I currently work across **B2B technology marketing**, including content, SEO, social media, Google Ads, e-commerce, website optimization, campaign planning, and performance reporting.
 
+## Portfolio
+
+My portfolio is built with **React + Vite** and deployed automatically with **GitHub Actions + GitHub Pages**.
+
+🌐 **Live portfolio:** https://rakamsr.github.io/rakamsr/
+
+### Tech stack
+
+`React` · `Vite` · `CSS` · `GitHub Actions` · `GitHub Pages`
+
+### Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+### Production build
+
+```bash
+npm run build
+npm run preview
+```
+
 ## What I work on
 
 - Marketing communication strategy and campaign planning
@@ -29,13 +53,6 @@ Worked across website performance, SEO, digital content, campaign pages, product
 ## Tools & Platforms
 
 `Google Analytics 4` · `Google Search Console` · `Google Ads` · `Meta` · `Hotjar` · `AppsFlyer` · `GitHub` · `E-commerce Platforms`
-
-## Portfolio
-
-A full interactive portfolio is included in this repository and can be published with GitHub Pages.
-
-**Portfolio URL after GitHub Pages is enabled:**  
-https://rakamsr.github.io/rakamsr/
 
 ---
 
