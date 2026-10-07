@@ -1,9 +1,6 @@
-name: Deploy React portfolio to GitHub Pages
+name: Build React portfolio preview
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 permissions:
@@ -11,17 +8,9 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: pages
-  cancel-in-progress: true
-
 jobs:
-  build-and-deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -37,16 +26,8 @@ jobs:
       - name: Build React app
         run: npm run build
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
+      - name: Upload React build artifact
+        uses: actions/upload-artifact@v4
         with:
-          enablement: true
-
-      - name: Upload production build
-        uses: actions/upload-pages-artifact@v3
-        with:
+          name: react-portfolio-dist
           path: ./dist
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
